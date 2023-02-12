@@ -1,0 +1,25 @@
+input {
+  file {
+    path => "/Users/anup/play/eventlog/logs/log.txt"
+  }
+}
+
+filter {
+    json {
+        source => "message"
+        target => "json_data"
+    }
+}
+
+
+output {
+    stdout { codec => rubydebug }
+}
+
+#output {
+  #elasticsearch {
+  #  hosts => ["localhost:9200"]
+  #  index => "sandesh-app-%{+YYYY.MM.dd}"
+  #  document_type => "daniel-app"
+  #}
+#}
