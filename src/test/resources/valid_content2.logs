@@ -1,0 +1,20 @@
+{"id":  "scsmbstgra" , "state":  "FINISHED" , "type":  "APPLICATION_LOG", "host":  "aaaaa123",  "timestamp": "1491377595213"}
+{"id":  "scsmbstgrb" , "state":  "FINISHED" , "type":  "APPLICATION_LOG", "host":  "bbbbb111", "timestamp": "1491375495213"}
+{"id":  "scsmbstgrc" , "state":  "STARTED" ,  "timestamp": "1491377495213"}
+{"id":  "scsmbstgrc" , "state":  "FINISHED" , "timestamp": "1491377495220"}
+{"id":  "scsmbstgrb" , "state":  "STARTED" , "type":  "APPLICATION_LOG", "host":  "bbbbb111", "timestamp": "1491375495208"}
+{"id":  "scsmbstgra" , "state":  "STARTED" , "type":  "APPLICATION_LOG", "host":  "aaaaa123", "timestamp": "1491377595209"}
+{"id":  "scsmbstgrd" , "state":  "STARTED" , "type":  "APPLICATION_LOG", "host":  "ddddd444", "timestamp":  "149137959570"}
+{"id":  "scsmbstgrd" , "state":  "FINISHED" , "type":  "APPLICATION_LOG", "host":  "ddddd444", "timestamp": "149137959573"}
+{"id":  "scsmbstgre" , "state":  "FINISHED" , "timestamp": "149137969573" }
+{"id":  "scsmbstgre" , "state":  "STARTED" , "timestamp": "149137969570" }
+{"id":  "scsmbstgrf" , "state":  "FINISHED" , "type":  "APPLICATION_LOG", "host":  "ffff123",  "timestamp": "1491377595213"}
+{"id":  "scsmbstgrg" , "state":  "FINISHED" , "type":  "APPLICATION_LOG", "host":  "gggg111", "timestamp": "1491375495213"}
+{"id":  "scsmbstgrh" , "state":  "STARTED" ,  "timestamp": "1491377495213"}
+{"id":  "scsmbstgrh" , "state":  "FINISHED" , "timestamp": "1491377495220"}
+{"id":  "scsmbstgrg" , "state":  "STARTED" , "type":  "APPLICATION_LOG", "host":  "gggg111", "timestamp": "1491375495208"}
+{"id":  "scsmbstgrf" , "state":  "STARTED" , "type":  "APPLICATION_LOG", "host":  "ffff123", "timestamp": "1491377595209"}
+{"id":  "scsmbstgri" , "state":  "STARTED" , "type":  "APPLICATION_LOG", "host":  "iiii444", "timestamp": "149137959570"}
+{"id":  "scsmbstgri" , "state":  "FINISHED" , "type": "APPLICATION_LOG", "host":  "iiii444", "timestamp": "149137959575"}
+{"id":  "scsmbstgrj" , "state":  "FINISHED" , "timestamp": "149137969574" }
+{"id":  "scsmbstgrj" , "state":  "STARTED" , "timestamp": "149137969570" }

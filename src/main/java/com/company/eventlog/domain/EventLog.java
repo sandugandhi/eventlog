@@ -11,10 +11,10 @@ public class EventLog {
     private String id;
     private long start;
     private long end;
+    private long duration;
+    private boolean flag = false;
     private String type;
     private String host;
-
-    private boolean flag;
 
     public void merge(EventLog eventLog) {
         this.id=eventLog.id;

@@ -2,15 +2,11 @@ package com.company.eventlog.service;
 
 import com.company.eventlog.config.EventLogObjectMapper;
 import com.company.eventlog.domain.EventLog;
-import com.company.eventlog.domain.EventLogDeserializer;
 import com.company.eventlog.repository.EventLogRepository;
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.module.SimpleModule;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
@@ -23,7 +19,7 @@ import java.util.stream.Stream;
 @Service
 public class EventLogService {
 
-    private static final long THRESHOLD = 4L;
+    private static final long THRESHOLD = 4;
     private static final Logger logger = LoggerFactory.getLogger(EventLogService.class);
 
     @Autowired
@@ -32,14 +28,16 @@ public class EventLogService {
     @Autowired
     private final EventLogRepository eventLogRepository;
 
-    public EventLogService(EventLogRepository eventLogRepository){
+    public EventLogService(EventLogRepository eventLogRepository,EventLogObjectMapper objectMapper){
         this.eventLogRepository=eventLogRepository;
+        this.objectMapper=objectMapper;
     }
 
     public EventLog save(EventLog eventLog) {
         return this.eventLogRepository.save(eventLog);
 
     }
+
     public Iterable<EventLog> list(){
         return this.eventLogRepository.findAll();
     }
@@ -64,11 +62,11 @@ public class EventLogService {
                             existingEL.merge(eventLog);
                             long duration = existingEL.getEnd() - existingEL.getStart();
                             if (duration > THRESHOLD) {
-                                logger.warn("Flag raised for id={} as duration is {} ms", existingEL.getId(), duration);
+                                logger.warn("Flag raised for id={} as the duration is {} ms", existingEL.getId(), duration);
                                 existingEL.setFlag(Boolean.TRUE);
                             }
+                            existingEL.setDuration(duration);
                             this.save(existingEL);
-                            // logger.info("java object = "+ existingEL);
                         } else {
                             hashMap.put(eventLog.getId(), eventLog);
                         }
